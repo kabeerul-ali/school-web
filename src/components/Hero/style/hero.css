@@ -1,0 +1,119 @@
+
+.school-hero {
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(8,18,29,.88) 0%, rgba(8,18,29,.55) 55%, rgba(8,18,29,.15) 100%),
+    linear-gradient(0deg, rgba(8,18,29,.5), transparent 40%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(900px, 90%);
+  margin: 0 auto;
+  padding: 150px 0 120px;
+}
+
+.hero-eyebrow {
+  display: block;
+  color: var(--secondary);
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(46px, 7vw, 88px);
+  line-height: 1.08;
+  font-weight: 500;
+  max-width: 850px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(255,255,255,.8);
+  max-width: 570px;
+  margin-top: 28px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  padding: 18px 25px;
+  background: var(--secondary);
+  color: white;
+  margin-top: 38px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.hero-button:hover {
+  background: var(--primary);
+  transform: translateY(-4px);
+}
+
+.hero-bottom {
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.75);
+}
+
+.hero-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .school-hero {
+    min-height: 90svh;
+    background-position: 60% center;
+  }
+
+  .hero-content {
+    padding: 130px 0 100px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(43px, 12vw, 65px);
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-bottom {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-button {
+    transition: none;
+  }
+}

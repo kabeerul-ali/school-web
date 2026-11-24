@@ -1,0 +1,11 @@
+
+:root {
+  --font-primary: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  --container-width: 1400px;
+  --section-spacing: clamp(70px, 9vw, 130px);
+
+  --transition: 0.35s ease;
+  --radius: 12px;
+}

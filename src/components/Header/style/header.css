@@ -1,0 +1,138 @@
+
+.school-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.header-inner {
+  max-width: 1500px;
+  margin: auto;
+  padding: 20px 5%;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  max-width: 270px;
+}
+
+.header-brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 38px);
+}
+
+.header-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,.85);
+  transition: var(--transition);
+}
+
+.header-nav a:hover {
+  color: var(--secondary);
+}
+
+.header-admission {
+  background: var(--secondary);
+  color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.header-admission:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.header-menu,
+.mobile-admission {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .header-inner {
+    min-height: 75px;
+  }
+
+  .header-brand {
+    font-size: 14px;
+  }
+
+  .header-menu {
+    display: flex;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    z-index: 102;
+  }
+
+  .desktop-admission {
+    display: none;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(85%, 380px);
+    height: 100vh;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 45px;
+    gap: 30px;
+    transform: translateX(110%);
+    transition: transform .4s ease;
+  }
+
+  .header-nav.active {
+    transform: translateX(0);
+  }
+
+  .header-nav a {
+    font-size: 19px;
+  }
+
+  .mobile-admission {
+    display: flex;
+  }
+}
+
+.school-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+  background-color: rgba(0, 0, 0, 0.521);
+}

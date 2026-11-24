@@ -1,0 +1,257 @@
+
+.about-section {
+  background: var(--background);
+  padding-top: var(--section-spacing);
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: clamp(55px, 9vw, 130px);
+}
+
+.about-visual {
+  position: relative;
+  padding: 0 35px 55px 0;
+}
+
+.about-image {
+  height: clamp(400px, 47vw, 610px);
+  overflow: hidden;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.about-visual:hover .about-image img {
+  transform: scale(1.045);
+}
+
+.about-experience {
+  position: absolute;
+  right: 0;
+  bottom: 95px;
+  width: 175px;
+  min-height: 175px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 7px solid var(--background);
+}
+
+.about-experience strong {
+  font-family: var(--font-heading);
+  font-size: 43px;
+  font-weight: 500;
+}
+
+.about-experience span {
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 5px;
+  color: rgba(255,255,255,.8);
+}
+
+.about-image-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--text);
+  opacity: .65;
+}
+
+.about-content {
+  max-width: 540px;
+}
+
+.about-label {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.about-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.about-divider {
+  width: 65px;
+  height: 3px;
+  background: var(--secondary);
+  margin: 30px 0;
+}
+
+.about-content p {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--text);
+  opacity: .75;
+}
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 35px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--secondary);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.about-button:hover {
+  gap: 38px;
+  color: var(--secondary);
+}
+
+/* Statistics */
+
+.stats-section {
+  margin-top: 70px;
+  background: var(--primary);
+  color: white;
+}
+
+.stats-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 55px 6%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  padding: 12px 25px;
+  border-right: 1px solid rgba(255,255,255,.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-item:last-child {
+  border-right: 0;
+}
+
+.stat-item strong {
+  font-family: var(--font-heading);
+  font-size: clamp(35px, 4vw, 52px);
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.stat-item span {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,.8);
+}
+
+@media (max-width: 850px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .about-visual {
+    max-width: 650px;
+  }
+
+  .about-content {
+    max-width: 650px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-container {
+    padding: 0 6%;
+    gap: 35px;
+  }
+
+  .about-image {
+    height: 360px;
+  }
+
+  .about-visual {
+    padding-right: 18px;
+    padding-bottom: 50px;
+  }
+
+  .about-experience {
+    width: 125px;
+    min-height: 125px;
+    bottom: 80px;
+    border-width: 5px;
+  }
+
+  .about-experience strong {
+    font-size: 32px;
+  }
+
+  .about-experience span {
+    font-size: 9px;
+  }
+
+  .about-content h2 {
+    font-size: 40px;
+  }
+
+  .stats-container {
+    padding: 35px 5%;
+  }
+
+  .stat-item {
+    padding: 10px;
+  }
+
+  .stat-item strong {
+    font-size: 35px;
+  }
+
+  .stat-item span {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-image img {
+    transition: none;
+  }
+
+  .about-button {
+    transition: none;
+  }
+}

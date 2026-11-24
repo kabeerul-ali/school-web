@@ -1,0 +1,133 @@
+
+.testimonials-section {
+  padding: var(--section-spacing) 6%;
+  background: #f0eee8;
+  color: #182638;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.testimonials-heading {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.testimonials-heading span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.testimonials-heading h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 5vw, 65px);
+  font-weight: 500;
+  margin-top: 22px;
+}
+
+.testimonial-main {
+  position: relative;
+  max-width: 950px;
+  margin: auto;
+  padding: 55px 70px;
+  background: white;
+  border-top: 3px solid var(--secondary);
+}
+
+.testimonial-quote {
+  font-family: var(--font-heading);
+  font-size: 110px;
+  line-height: .8;
+  color: var(--secondary);
+}
+
+.testimonial-content {
+  min-height: 240px;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 7px;
+  color: var(--secondary);
+  margin: 25px 0;
+}
+
+.testimonial-content h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3.5vw, 38px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 35px;
+}
+
+.testimonial-author strong {
+  color: var(--primary);
+  font-size: 15px;
+}
+
+.testimonial-author span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: .6;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.testimonial-controls span {
+  margin-right: auto;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.testimonial-controls button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.testimonial-controls button:hover {
+  background: var(--secondary);
+}
+
+@media (max-width: 550px) {
+  .testimonial-main {
+    padding: 35px 22px;
+  }
+
+  .testimonial-content {
+    min-height: 300px;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-controls button {
+    transition: none;
+  }
+}
